@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {
-    path:'repositories',
-    loadChildren: ()  => import('./repository-github.module').then(m => m.RepositoryGithubModule)
+    path:'',
+    component:ListComponent,
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
-})
+}) 
 export class RepositoryGithubRoutingModule { }
