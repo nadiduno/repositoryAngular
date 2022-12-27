@@ -1,1 +1,7 @@
-<h1>Nadi Duno!</h1>
+<h1>Dados da API</h1>
+<ul>
+    <li *ngFor="let repo of repos | async">
+        <p>{{repo.name}}</p>
+        <p>{{repo.description}}</p>
+    </li>
+</ul>
